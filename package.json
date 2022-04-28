@@ -1,0 +1,25 @@
+{
+  "name": "gulp-website",
+  "version": "1.0.0",
+  "description": "This is the basic static website built with HTML5, SCSS and TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donghhan/gulp-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donghhan/gulp-practice/issues"
+  },
+  "homepage": "https://github.com/donghhan/gulp-practice#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "typescript": "^4.6.3"
+  }
+}
