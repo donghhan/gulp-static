@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA,C,CACE,qB,CACA,Q,CACA,S,CAGF,I,CACE,S,CACA,U,CACA,Y,CACA,Y,CACA,sB","file":"style.css","sourcesContent":["* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  color: red;\n  width: 100%;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n}"]}
