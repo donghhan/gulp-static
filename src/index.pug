@@ -4,7 +4,43 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
         title Document
     body 
-        p#greeting Loading ...
+        header.container
+            nav 
+                div.logo-image__wrapper
+                    img(src="image/logo.png", alt="logo").logo-image
+                div.navbar
+                    ul.menu
+                        li 
+                            a(href="#team") Team
+                        li 
+                            a(href="#process") Process
+                        li  
+                            a(href="#customers") Customers
+                        li 
+                            a(href="#news") News
+                    ul.utility
+                        li 
+                            a(href="#mail")
+                                i.fa-regular.fa-envelope
+                        li 
+                            a(href="#phone")  
+                                i.fa-regular.fa-phone
+        section#hero.container
+            .wrapper
+                .main-text
+                    span Trust is earned
+                    span through exprience
+                    span.colored let us earn yours
+                .sub-text 
+                    span Enterprise software solutions for business
+                    span growth and performance
+                a(href="#view-more").view-btn View more 
         script(src="js/bundle.js")
+        script(src="https://kit.fontawesome.com/00dde58123.js" crossorigin="anonymous")

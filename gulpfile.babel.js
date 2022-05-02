@@ -24,7 +24,7 @@ const routes = {
     build: "build/image",
   },
   scss: {
-    src: "src/scss/style.scss",
+    src: "src/scss/*.scss",
     build: "build/css/",
     watch: "src/scss/**/*.scss",
   },

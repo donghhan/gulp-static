@@ -1,0 +1,39 @@
+@use "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: variables.$bg-color;
+  position: relative;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  padding: 0 10%;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
