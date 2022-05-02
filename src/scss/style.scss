@@ -4,7 +4,7 @@
 
 #hero {
   .wrapper {
-    padding-top: 300px;
+    margin-top: 300px;
 
     .main-text {
       font-size: 60px;
@@ -24,9 +24,25 @@
 
     .sub-text {
       color: variables.$gray;
+      margin-bottom: 100px;
 
       span {
         display: block;
+      }
+    }
+
+    .view-btn {
+      width: fit-content;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      background-color: #000;
+      font-weight: 300;
+
+      i {
+        margin-left: 30px;
       }
     }
   }
