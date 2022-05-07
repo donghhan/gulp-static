@@ -12,12 +12,20 @@ html(lang="en")
         title Document
     body 
         header
-                img(src="/image/logo.png", alt="logo")
+            div
+                img(src="image/logo.png", alt="logo")
+            div.menu-btn__wrapper
+                span.text Menu
                 .menu-btn 
-                    span Menu
-        section#hero 
-            
-
+        main
+            section#hero
+                h1.hero-text 
+                    | We make 
+                    span.inner-text web  
+                    |  better.
+                h2.logo-text luna
+                .godown-btn__wrapper 
+                    
 
         script(src="js/bundle.js")
         script(src="https://kit.fontawesome.com/00dde58123.js" crossorigin="anonymous")

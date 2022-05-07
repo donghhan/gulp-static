@@ -1,18 +1,1 @@
 @use "variables";
-
-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 25px;
-  position: fixed;
-
-  .menu-btn {
-    span {
-      color: variables.$white;
-      font-size: 24px;
-      margin-right: 25px;
-    }
-  }
-}
