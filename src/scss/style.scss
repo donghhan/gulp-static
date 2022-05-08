@@ -51,15 +51,15 @@ header {
   }
 }
 
-main {
+#hero {
   @include mixin.main;
   background-color: variables.$main-color;
-  border: 1px solid red;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  #hero {
+  .content {
     @include mixin.section;
     height: 120vh;
     display: flex;
@@ -95,9 +95,83 @@ main {
       position: absolute;
       bottom: 15%;
       color: variables.$main-color;
-      text-shadow: 0px 5px 30px #271459;
+      text-shadow: 0px 5px 50px #271459;
       text-transform: uppercase;
-      letter-spacing: 100px;
+      letter-spacing: 50px;
+    }
+
+    .godown-btn__wrapper {
+      cursor: pointer;
+      position: absolute;
+      bottom: 10%;
+
+      .godown-btn {
+        position: absolute;
+
+        &::before {
+          content: "";
+          width: 20px;
+          height: 2px;
+          background-color: variables.$light-gray;
+          position: absolute;
+          top: 0;
+          transform: rotate(45deg) translateX(-45%);
+        }
+
+        &::after {
+          content: "";
+          width: 20px;
+          height: 2px;
+          background-color: variables.$light-gray;
+          position: absolute;
+          top: 0;
+          transform: rotate(-45deg) translateX(45%);
+        }
+      }
+    }
+  }
+}
+
+#about {
+  @include mixin.main;
+  background-color: variables.$white;
+
+  .content {
+    @include mixin.section;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .section-title__wrapper {
+      display: flex;
+
+      .section-title {
+        font-size: 64px;
+        font-weight: 300;
+        margin-bottom: 40px;
+      }
+
+      .line {
+        width: 120px;
+        height: 3px;
+        background-color: variables.$main-color;
+      }
+
+      .section-exp {
+        width: 700px;
+
+        p {
+          line-height: 1.5;
+          font-weight: 300;
+          color: variables.$gray;
+
+          &:nth-of-type(2) {
+            margin-top: 50px;
+          }
+        }
+      }
     }
   }
 }
