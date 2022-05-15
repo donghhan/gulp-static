@@ -1,0 +1,46 @@
+@use "variable.scss";
+@use "reset.scss";
+@use "mixin.scss";
+
+.container {
+  padding: 0 10%;
+
+  @include mixin.devices(tablet-horizontal) {
+    padding: 30px;
+  }
+}
+
+header {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  border: 1px solid red;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: inherit;
+
+    .logo {
+      text-transform: uppercase;
+      font-size: 33.33px;
+      font-weight: bold;
+      font-family: variable.$playfair-display;
+    }
+
+    .nav-list {
+      display: flex;
+      gap: 25px;
+
+      .link {
+        text-transform: uppercase;
+        font-size: 14px;
+      }
+    }
+  }
+}

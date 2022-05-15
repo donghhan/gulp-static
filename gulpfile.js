@@ -89,11 +89,11 @@ function Clean() {
 function Watch() {
   browserSync.init({
     server: {
-      baseDir: "./src",
+      baseDir: "./build",
     },
   });
   gulp.watch(routes.scss.src, SCSStoCSS);
-  gulp.watch(routes.html.src).on("change", browserSync.reload);
+  gulp.watch(routes.html.src, MinifyHTML);
   gulp.watch(routes.ts.src).on("change", browserSync.reload);
 }
 
