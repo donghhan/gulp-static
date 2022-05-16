@@ -28,7 +28,7 @@ const routes = {
     build: "build/css/",
   },
   ts: {
-    src: "src/ts/main.ts",
+    src: "src/ts/**/*.ts",
     build: "build/js/",
   },
 };
