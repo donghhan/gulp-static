@@ -12,6 +12,9 @@ const source = require("vinyl-source-stream");
 const sourcemaps = require("gulp-sourcemaps");
 const image = require("gulp-image");
 const { stream } = require("browser-sync");
+const uglifycss = require("gulp-uglifycss");
+const ts = require("gulp-typescript");
+const tsProject = ts.createProject("tsconfig.json");
 
 // Routes
 const routes = {
@@ -48,6 +51,12 @@ function SCSStoCSS() {
     .src(routes.scss.src)
     .pipe(sass())
     .pipe(autoPrefixer())
+    .pipe(
+      uglifycss({
+        maxLineLen: 80,
+        uglyComments: true,
+      })
+    )
     .pipe(gulp.dest(routes.scss.build))
     .pipe(browserSync.stream());
 }
@@ -62,12 +71,12 @@ function TStoJS() {
   })
     .plugin(tsify)
     .bundle()
-    .pipe(source("bundle.js"))
+    .pipe(source("js/bundle.js"))
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(uglify())
-    .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest(routes.ts.build))
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest("build"))
     .pipe(browserSync.stream());
 }
 
@@ -94,7 +103,7 @@ function Watch() {
   });
   gulp.watch(routes.scss.src, SCSStoCSS);
   gulp.watch(routes.html.src, MinifyHTML);
-  gulp.watch(routes.ts.src).on("change", browserSync.reload);
+  gulp.watch(routes.ts.src, TStoJS);
 }
 
 // Task serializing
