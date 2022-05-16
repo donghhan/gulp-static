@@ -1,6 +1,7 @@
 @use "variable.scss";
 @use "reset.scss";
 @use "mixin.scss";
+@use "animation.scss";
 
 .container {
   padding: 0 10%;
@@ -40,6 +41,43 @@ header {
       .link {
         text-transform: uppercase;
         font-size: 14px;
+      }
+    }
+
+    .hamburger-btn {
+      display: none;
+    }
+
+    @include mixin.devices(tablet-horizontal) {
+      .nav-list {
+        display: none;
+      }
+
+      .hamburger-btn {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: variable.$black;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 10px;
+          width: 30px;
+          height: 2px;
+          background-color: variable.$black;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 10px;
+          width: 30px;
+          height: 2px;
+          background-color: variable.$black;
+        }
       }
     }
   }

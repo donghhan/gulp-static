@@ -145,6 +145,9 @@ span {
   display: inline-block;
 }
 
+@-webkit-keyframes hamburger-btn {}
+
+@keyframes hamburger-btn {}
 .container {
   padding: 0 10%;
 }
@@ -184,4 +187,36 @@ header nav .nav-list {
 header nav .nav-list .link {
   text-transform: uppercase;
   font-size: 14px;
+}
+header nav .hamburger-btn {
+  display: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  header nav .nav-list {
+    display: none;
+  }
+  header nav .hamburger-btn {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    position: relative;
+    cursor: pointer;
+  }
+  header nav .hamburger-btn::before {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+  }
+  header nav .hamburger-btn::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+  }
 }
