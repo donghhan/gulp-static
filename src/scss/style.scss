@@ -7,7 +7,15 @@
   padding: 0 10%;
 
   @include mixin.devices(tablet-horizontal) {
-    padding: 30px;
+    padding: 0 60px;
+  }
+
+  @include mixin.devices(mobile-horizontal) {
+    padding: 0 50px;
+  }
+
+  @include mixin.devices(mobile-vertical) {
+    padding: 0 40px;
   }
 }
 
@@ -19,7 +27,8 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  border: 1px solid red;
+  background-color: variable.$white;
+  z-index: 500;
 
   nav {
     display: flex;
@@ -32,6 +41,10 @@ header {
       font-size: 33.33px;
       font-weight: bold;
       font-family: variable.$playfair-display;
+
+      .dot {
+        color: variable.$yellow;
+      }
     }
 
     .nav-list {
@@ -62,94 +75,236 @@ header {
         cursor: pointer;
 
         .hamburger-btn__left {
-          position: absolute;
-          width: 15px;
-          height: 5px;
-          background-color: variable.$black;
-          transition: background-color 0.5s ease-in-out;
+          @include mixin.button(15px, 5px);
 
           &::before {
-            content: "";
-            position: absolute;
-            top: -10px;
-            width: 15px;
-            height: 5px;
-            background-color: variable.$black;
-            transition: transform 0.5s ease-in-out;
+            @include mixin.button(15px, 5px, -10px);
           }
 
           &::after {
-            content: "";
-            position: absolute;
-            top: 10px;
-            width: 15px;
-            height: 5px;
-            background-color: variable.$black;
-            transition: transform 0.5s ease-in-out;
+            @include mixin.button(15px, 5px, 10px);
           }
         }
 
         .hamburger-btn__right {
-          position: absolute;
-          width: 15px;
-          height: 5px;
-          right: 0;
-          background-color: variable.$black;
-          transition: background-color 0.5s ease-in-out;
+          @include mixin.button(15px, 5px, null, 0);
 
           &::before {
-            content: "";
-            position: absolute;
-            top: -10px;
-            width: 15px;
-            height: 5px;
-            background-color: variable.$black;
-            transition: transform 0.5s ease-in-out;
+            @include mixin.button(15px, 5px, -10px, null);
           }
 
           &::after {
-            content: "";
-            position: absolute;
-            top: 10px;
-            width: 15px;
-            height: 5px;
-            background-color: variable.$black;
-            transition: transform 0.5s ease-in-out;
+            @include mixin.button(15px, 5px, 10px, null);
           }
         }
 
         &.open {
           .hamburger-btn__left {
-            background-color: transparent;
-            transition: background-color 0.5s ease-in-out;
+            @include mixin.button-clicked;
 
             &::before {
-              transition: transform 0.5s ease-in-out;
-              transform: rotateZ(45deg) scaleX(1.4) translate(2px, 2px);
+              @include mixin.button-clicked-partial(45, 1.4, 2, 2);
             }
 
             &::after {
-              transition: transform 0.5s ease-in-out;
-              transform: rotateZ(-45deg) scaleX(1.4) translate(2px, -2px);
+              @include mixin.button-clicked-partial(-45, 1.4, 2, -2);
             }
           }
 
           .hamburger-btn__right {
-            background-color: transparent;
-            transition: background-color 0.5s ease-in-out;
+            @include mixin.button-clicked;
 
             &::before {
-              transition: transform 0.5s ease-in-out;
-              transform: rotateZ(-45deg) scaleX(1.4) translate(-2px, 2px);
+              @include mixin.button-clicked-partial(-45, 1.4, -2, 2);
             }
 
             &::after {
-              transition: transform 0.5s ease-in-out;
-              transform: rotateZ(45deg) scaleX(1.4) translate(-2px, -2px);
+              @include mixin.button-clicked-partial(45, 1.4, -2, -2);
             }
           }
         }
       }
+    }
+
+    @include mixin.devices(mobile-horizontal) {
+      .logo {
+        font-size: 23.33px;
+      }
+
+      .nav-list {
+        display: none;
+      }
+
+      .hamburger-btn {
+        display: flex;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        cursor: pointer;
+
+        .hamburger-btn__left {
+          @include mixin.button(15px, 5px);
+
+          &::before {
+            @include mixin.button(15px, 5px, -10px);
+          }
+
+          &::after {
+            @include mixin.button(15px, 5px, 10px);
+          }
+        }
+
+        .hamburger-btn__right {
+          @include mixin.button(15px, 5px, null, 0);
+
+          &::before {
+            @include mixin.button(15px, 5px, -10px, null);
+          }
+
+          &::after {
+            @include mixin.button(15px, 5px, 10px, null);
+          }
+        }
+
+        &.open {
+          .hamburger-btn__left {
+            @include mixin.button-clicked;
+
+            &::before {
+              @include mixin.button-clicked-partial(45, 1.4, 2, 2);
+            }
+
+            &::after {
+              @include mixin.button-clicked-partial(-45, 1.4, 2, -2);
+            }
+          }
+
+          .hamburger-btn__right {
+            @include mixin.button-clicked;
+
+            &::before {
+              @include mixin.button-clicked-partial(-45, 1.4, -2, 2);
+            }
+
+            &::after {
+              @include mixin.button-clicked-partial(45, 1.4, -2, -2);
+            }
+          }
+        }
+      }
+    }
+
+    @include mixin.devices(mobile-vertical) {
+      .logo {
+        font-size: 19.33px;
+      }
+
+      .nav-list {
+        display: none;
+      }
+
+      .hamburger-btn {
+        display: flex;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        cursor: pointer;
+
+        .hamburger-btn__left {
+          @include mixin.button(15px, 5px);
+
+          &::before {
+            @include mixin.button(15px, 5px, -10px);
+          }
+
+          &::after {
+            @include mixin.button(15px, 5px, 10px);
+          }
+        }
+
+        .hamburger-btn__right {
+          @include mixin.button(15px, 5px, null, 0);
+
+          &::before {
+            @include mixin.button(15px, 5px, -10px, null);
+          }
+
+          &::after {
+            @include mixin.button(15px, 5px, 10px, null);
+          }
+        }
+
+        &.open {
+          .hamburger-btn__left {
+            @include mixin.button-clicked;
+
+            &::before {
+              @include mixin.button-clicked-partial(45, 1.4, 2, 2);
+            }
+
+            &::after {
+              @include mixin.button-clicked-partial(-45, 1.4, 2, -2);
+            }
+          }
+
+          .hamburger-btn__right {
+            @include mixin.button-clicked;
+
+            &::before {
+              @include mixin.button-clicked-partial(-45, 1.4, -2, 2);
+            }
+
+            &::after {
+              @include mixin.button-clicked-partial(45, 1.4, -2, -2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url(../image/bg-lawyer.png) no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .hero__wrapper {
+    position: absolute;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+
+    .name {
+      color: variable.$white;
+
+      h1 {
+        font-size: 65px;
+        font-family: variable.$playfair-display;
+      }
+
+      h2 {
+        font-size: 31px;
+      }
+    }
+
+    .contact-btn {
+      width: 180px;
+      height: 50px;
+      border-radius: 25px;
+      background-color: variable.$yellow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-family: variable.$playfair-display;
+      letter-spacing: 1px;
     }
   }
 }

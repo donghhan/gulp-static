@@ -3,23 +3,56 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{di
 body{line-height:1;font-family:"Open sans",serif}ol,ul{list-style:none}
 blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}
 table{border-collapse:collapse;border-spacing:0}a{text-decoration:none;color:inherit}
-span{display:inline-block}.container{padding:0 10%}@media only screen and (min-width:768px) and (max-width:1023px){.container{padding:30px}
-}header{width:100%;height:110px;display:flex;align-items:center;position:-webkit-sticky;position:sticky;top:0;left:0;border:1px solid red}
+span{display:inline-block}button{outline:0;background:0;border:0;cursor:pointer}.container{padding:0 10%}
+@media only screen and (min-width:768px) and (max-width:1023px){.container{padding:0 60px}
+}@media screen and (min-width:480px) and (max-width:767px){.container{padding:0 50px}
+}@media screen and (max-width:479px){.container{padding:0 40px}}header{width:100%;height:110px;display:flex;align-items:center;position:-webkit-sticky;position:sticky;top:0;left:0;background-color:#fff;z-index:500}
 header nav{display:flex;align-items:center;justify-content:space-between;width:inherit}
 header nav .logo{text-transform:uppercase;font-size:33.33px;font-weight:bold;font-family:"Playfair Display",serif}
-header nav .nav-list{display:flex;gap:25px}header nav .nav-list .link{text-transform:uppercase;font-size:14px}
+header nav .logo .dot{color:#e8bf5d}header nav .nav-list{display:flex;gap:25px}header nav .nav-list .link{text-transform:uppercase;font-size:14px}
 header nav .hamburger-btn{display:none}@media only screen and (min-width:768px) and (max-width:1023px){header nav .nav-list{display:none}
 header nav .hamburger-btn{display:flex;align-items:center;width:30px;height:30px;position:relative;cursor:pointer}
 header nav .hamburger-btn .hamburger-btn__left{position:absolute;width:15px;height:5px;background-color:#000;transition:background-color .5s ease-in-out}
-header nav .hamburger-btn .hamburger-btn__left::before{content:"";position:absolute;top:-10px;width:15px;height:5px;background-color:#000;transition:transform .5s ease-in-out}
-header nav .hamburger-btn .hamburger-btn__left::after{content:"";position:absolute;top:10px;width:15px;height:5px;background-color:#000;transition:transform .5s ease-in-out}
-header nav .hamburger-btn .hamburger-btn__right{position:absolute;width:15px;height:5px;right:0;background-color:#000;transition:background-color .5s ease-in-out}
-header nav .hamburger-btn .hamburger-btn__right::before{content:"";position:absolute;top:-10px;width:15px;height:5px;background-color:#000;transition:transform .5s ease-in-out}
-header nav .hamburger-btn .hamburger-btn__right::after{content:"";position:absolute;top:10px;width:15px;height:5px;background-color:#000;transition:transform .5s ease-in-out}
+header nav .hamburger-btn .hamburger-btn__left::before{position:absolute;width:15px;height:5px;background-color:#000;top:-10px;transition:transform .5s ease-in-out;content:""}
+header nav .hamburger-btn .hamburger-btn__left::after{position:absolute;width:15px;height:5px;background-color:#000;top:10px;transition:transform .5s ease-in-out;content:""}
+header nav .hamburger-btn .hamburger-btn__right{position:absolute;width:15px;height:5px;background-color:#000;transition:background-color .5s ease-in-out;right:0}
+header nav .hamburger-btn .hamburger-btn__right::before{position:absolute;width:15px;height:5px;background-color:#000;top:-10px;transition:transform .5s ease-in-out;content:""}
+header nav .hamburger-btn .hamburger-btn__right::after{position:absolute;width:15px;height:5px;background-color:#000;top:10px;transition:transform .5s ease-in-out;content:""}
 header nav .hamburger-btn.open .hamburger-btn__left{background-color:transparent;transition:background-color .5s ease-in-out}
 header nav .hamburger-btn.open .hamburger-btn__left::before{transition:transform .5s ease-in-out;transform:rotateZ(45deg) scaleX(1.4) translate(2px,2px)}
 header nav .hamburger-btn.open .hamburger-btn__left::after{transition:transform .5s ease-in-out;transform:rotateZ(-45deg) scaleX(1.4) translate(2px,-2px)}
 header nav .hamburger-btn.open .hamburger-btn__right{background-color:transparent;transition:background-color .5s ease-in-out}
 header nav .hamburger-btn.open .hamburger-btn__right::before{transition:transform .5s ease-in-out;transform:rotateZ(-45deg) scaleX(1.4) translate(-2px,2px)}
 header nav .hamburger-btn.open .hamburger-btn__right::after{transition:transform .5s ease-in-out;transform:rotateZ(45deg) scaleX(1.4) translate(-2px,-2px)}
-}
+}@media screen and (min-width:480px) and (max-width:767px){header nav .logo{font-size:23.33px}
+header nav .nav-list{display:none}header nav .hamburger-btn{display:flex;align-items:center;width:30px;height:30px;position:relative;cursor:pointer}
+header nav .hamburger-btn .hamburger-btn__left{position:absolute;width:15px;height:5px;background-color:#000;transition:background-color .5s ease-in-out}
+header nav .hamburger-btn .hamburger-btn__left::before{position:absolute;width:15px;height:5px;background-color:#000;top:-10px;transition:transform .5s ease-in-out;content:""}
+header nav .hamburger-btn .hamburger-btn__left::after{position:absolute;width:15px;height:5px;background-color:#000;top:10px;transition:transform .5s ease-in-out;content:""}
+header nav .hamburger-btn .hamburger-btn__right{position:absolute;width:15px;height:5px;background-color:#000;transition:background-color .5s ease-in-out;right:0}
+header nav .hamburger-btn .hamburger-btn__right::before{position:absolute;width:15px;height:5px;background-color:#000;top:-10px;transition:transform .5s ease-in-out;content:""}
+header nav .hamburger-btn .hamburger-btn__right::after{position:absolute;width:15px;height:5px;background-color:#000;top:10px;transition:transform .5s ease-in-out;content:""}
+header nav .hamburger-btn.open .hamburger-btn__left{background-color:transparent;transition:background-color .5s ease-in-out}
+header nav .hamburger-btn.open .hamburger-btn__left::before{transition:transform .5s ease-in-out;transform:rotateZ(45deg) scaleX(1.4) translate(2px,2px)}
+header nav .hamburger-btn.open .hamburger-btn__left::after{transition:transform .5s ease-in-out;transform:rotateZ(-45deg) scaleX(1.4) translate(2px,-2px)}
+header nav .hamburger-btn.open .hamburger-btn__right{background-color:transparent;transition:background-color .5s ease-in-out}
+header nav .hamburger-btn.open .hamburger-btn__right::before{transition:transform .5s ease-in-out;transform:rotateZ(-45deg) scaleX(1.4) translate(-2px,2px)}
+header nav .hamburger-btn.open .hamburger-btn__right::after{transition:transform .5s ease-in-out;transform:rotateZ(45deg) scaleX(1.4) translate(-2px,-2px)}
+}@media screen and (max-width:479px){header nav .logo{font-size:19.33px}header nav .nav-list{display:none}
+header nav .hamburger-btn{display:flex;align-items:center;width:30px;height:30px;position:relative;cursor:pointer}
+header nav .hamburger-btn .hamburger-btn__left{position:absolute;width:15px;height:5px;background-color:#000;transition:background-color .5s ease-in-out}
+header nav .hamburger-btn .hamburger-btn__left::before{position:absolute;width:15px;height:5px;background-color:#000;top:-10px;transition:transform .5s ease-in-out;content:""}
+header nav .hamburger-btn .hamburger-btn__left::after{position:absolute;width:15px;height:5px;background-color:#000;top:10px;transition:transform .5s ease-in-out;content:""}
+header nav .hamburger-btn .hamburger-btn__right{position:absolute;width:15px;height:5px;background-color:#000;transition:background-color .5s ease-in-out;right:0}
+header nav .hamburger-btn .hamburger-btn__right::before{position:absolute;width:15px;height:5px;background-color:#000;top:-10px;transition:transform .5s ease-in-out;content:""}
+header nav .hamburger-btn .hamburger-btn__right::after{position:absolute;width:15px;height:5px;background-color:#000;top:10px;transition:transform .5s ease-in-out;content:""}
+header nav .hamburger-btn.open .hamburger-btn__left{background-color:transparent;transition:background-color .5s ease-in-out}
+header nav .hamburger-btn.open .hamburger-btn__left::before{transition:transform .5s ease-in-out;transform:rotateZ(45deg) scaleX(1.4) translate(2px,2px)}
+header nav .hamburger-btn.open .hamburger-btn__left::after{transition:transform .5s ease-in-out;transform:rotateZ(-45deg) scaleX(1.4) translate(2px,-2px)}
+header nav .hamburger-btn.open .hamburger-btn__right{background-color:transparent;transition:background-color .5s ease-in-out}
+header nav .hamburger-btn.open .hamburger-btn__right::before{transition:transform .5s ease-in-out;transform:rotateZ(-45deg) scaleX(1.4) translate(-2px,2px)}
+header nav .hamburger-btn.open .hamburger-btn__right::after{transition:transform .5s ease-in-out;transform:rotateZ(45deg) scaleX(1.4) translate(-2px,-2px)}
+}#hero{width:100%;height:100vh;background:url(../image/bg-lawyer.png) no-repeat;background-size:cover;position:relative}
+#hero .hero__wrapper{position:absolute;bottom:140px;left:50%;transform:translateX(-50%);display:flex;align-items:center}
+#hero .hero__wrapper .name{color:#fff}#hero .hero__wrapper .name h1{font-size:65px;font-family:"Playfair Display",serif}
+#hero .hero__wrapper .name h2{font-size:31px}#hero .hero__wrapper .contact-btn{width:180px;height:50px;border-radius:25px;background-color:#e8bf5d;display:flex;justify-content:center;align-items:center;font-size:16px;font-family:"Playfair Display",serif;letter-spacing:1px}
