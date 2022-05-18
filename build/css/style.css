@@ -6,7 +6,7 @@ table{border-collapse:collapse;border-spacing:0}a{text-decoration:none;color:inh
 span{display:inline-block}button{outline:0;background:0;border:0;cursor:pointer}.container{padding:0 10%}
 @media only screen and (min-width:768px) and (max-width:1023px){.container{padding:0 60px}
 }@media screen and (min-width:480px) and (max-width:767px){.container{padding:0 50px}
-}@media screen and (max-width:479px){.container{padding:0 40px}}header{width:100%;height:110px;display:flex;align-items:center;position:-webkit-sticky;position:sticky;top:0;left:0;background-color:#fff;z-index:500}
+}@media screen and (max-width:479px){.container{padding:0 40px}}header{width:100%;height:110px;display:flex;align-items:center;position:-webkit-sticky;position:sticky;top:0;background-color:#fff;z-index:500}
 header nav{display:flex;align-items:center;justify-content:space-between;width:inherit}
 header nav .logo{text-transform:uppercase;font-size:33.33px;font-weight:bold;font-family:"Playfair Display",serif}
 header nav .logo .dot{color:#e8bf5d}header nav .nav-list{display:flex;gap:25px}header nav .nav-list .link{text-transform:uppercase;font-size:14px}
@@ -52,7 +52,22 @@ header nav .hamburger-btn.open .hamburger-btn__left::after{transition:transform 
 header nav .hamburger-btn.open .hamburger-btn__right{background-color:transparent;transition:background-color .5s ease-in-out}
 header nav .hamburger-btn.open .hamburger-btn__right::before{transition:transform .5s ease-in-out;transform:rotateZ(-45deg) scaleX(1.4) translate(-2px,2px)}
 header nav .hamburger-btn.open .hamburger-btn__right::after{transition:transform .5s ease-in-out;transform:rotateZ(45deg) scaleX(1.4) translate(-2px,-2px)}
-}#hero{width:100%;height:100vh;background:url(../image/bg-lawyer.png) no-repeat;background-size:cover;position:relative}
-#hero .hero__wrapper{position:absolute;bottom:140px;left:50%;transform:translateX(-50%);display:flex;align-items:center}
-#hero .hero__wrapper .name{color:#fff}#hero .hero__wrapper .name h1{font-size:65px;font-family:"Playfair Display",serif}
-#hero .hero__wrapper .name h2{font-size:31px}#hero .hero__wrapper .contact-btn{width:180px;height:50px;border-radius:25px;background-color:#e8bf5d;display:flex;justify-content:center;align-items:center;font-size:16px;font-family:"Playfair Display",serif;letter-spacing:1px}
+}main #hero{width:100%;height:100vh;background:url(../image/bg-lawyer.jpg) no-repeat;background-size:cover;position:relative}
+main #hero .hero__wrapper{position:absolute;max-width:1000px;width:100%;bottom:15%;left:50%;transform:translate(-50%,-15%);display:flex;align-items:center;justify-content:space-between}
+main #hero .hero__wrapper .name{color:#fff}main #hero .hero__wrapper .name h1{font-size:65px;font-family:"Playfair Display",serif}
+main #hero .hero__wrapper .name h2{font-size:31px}main #hero .hero__wrapper .contact-btn{width:180px;height:50px;border-radius:25px;background-color:#e8bf5d;display:flex;justify-content:center;align-items:center;font-size:16px;font-family:"Playfair Display",serif;letter-spacing:1px}
+@media only screen and (min-width:768px) and (max-width:1023px){main #hero{background-size:cover;background-position:center}
+main #hero .hero__wrapper{width:100%;max-width:600px;position:absolute;left:50%;bottom:10%}
+main #hero .hero__wrapper .name h1{font-size:50px}main #hero .hero__wrapper .name h2{font-size:25px}
+}@media screen and (min-width:480px) and (max-width:767px){main #hero{background-size:cover;background-position:center}
+main #hero .hero__wrapper{width:100%;max-width:350px;position:absolute;left:50%;bottom:10%}
+main #hero .hero__wrapper .name h1{font-size:25px}main #hero .hero__wrapper .name h2{font-size:15px}
+main #hero .hero__wrapper .contact-btn{width:100px;font-size:12.5px}}main #about{width:100%;height:70vh;padding-top:100px;padding-bottom:120px}
+main #about .about__wrapper{max-width:1200px;margin-bottom:50px}main #about .about__wrapper .section-title{font-size:30.89px;font-family:"Playfair Display",serif;margin-bottom:35px}
+main #about .about__wrapper .intro{font-size:20.92px;color:#666;font-family:"Playfair Display",serif;letter-spacing:1px;line-height:1.5}
+main #about .info__wrapper{max-width:1200px;display:flex}main #about .info__wrapper .paragraph{width:600px}
+main #about .info__wrapper .paragraph .p-title{font-size:21px;font-family:"Playfair Display",serif;margin-bottom:40px}
+main #about .info__wrapper .paragraph .timeline{display:flex;align-items:center;margin-bottom:30px}
+main #about .info__wrapper .paragraph .timeline:nth-of-type(3){margin-bottom:0}main #about .info__wrapper .paragraph .timeline .year{margin-right:35px;font-size:21px;font-weight:bold}
+main #about .info__wrapper .paragraph .timeline .frontline{width:450px;line-height:1.25;color:#666}
+main #about .info__wrapper .expertise .expertise-exp{line-height:2;color:#666}
