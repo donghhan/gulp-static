@@ -365,9 +365,13 @@ main {
 
   #about {
     width: 100%;
-    height: 70vh;
+    height: fit-content;
     padding-top: 100px;
     padding-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .about__wrapper {
       max-width: 1200px;
@@ -390,10 +394,13 @@ main {
 
     .info__wrapper {
       max-width: 1200px;
+      width: 100%;
       display: flex;
+      justify-content: space-between;
+      gap: 50px;
 
       .paragraph {
-        width: 600px;
+        max-width: 600px;
 
         .p-title {
           font-size: 21px;
@@ -411,13 +418,13 @@ main {
           }
 
           .year {
-            margin-right: 35px;
+            margin-right: 5%;
             font-size: 21px;
             font-weight: bold;
           }
 
           .frontline {
-            width: 450px;
+            max-width: 500px;
             line-height: 1.25;
             color: variable.$grey;
           }
@@ -425,7 +432,7 @@ main {
       }
       .expertise {
         .expertise-exp {
-          line-height: 2;
+          line-height: 1.5;
           color: variable.$grey;
         }
       }
