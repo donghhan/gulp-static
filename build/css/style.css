@@ -1,6 +1,6 @@
 *{margin:0;padding:0;box-sizing:border-box}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-body{line-height:1;font-family:"Open sans",serif}ol,ul{list-style:none}
+body{line-height:1;font-family:"Open sans",serif;z-index:-5}ol,ul{list-style:none}
 blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}
 table{border-collapse:collapse;border-spacing:0}a{text-decoration:none;color:inherit}
 span{display:inline-block}button{outline:0;background:0;border:0;cursor:pointer}.container{padding:0 10%}
@@ -75,11 +75,32 @@ main #about .info__wrapper .expertise .expertise-exp{line-height:1.5;color:#666}
 main #about .info__wrapper .paragraph{max-width:inherit}}@media screen and (min-width:480px) and (max-width:767px){main #about .info__wrapper{flex-direction:column;width:100%}
 main #about .info__wrapper .paragraph{max-width:inherit}}@media screen and (max-width:479px){main #about .info__wrapper{flex-direction:column;width:100%}
 main #about .info__wrapper .paragraph{max-width:inherit}main #about .info__wrapper .paragraph .expertise-exp{text-align:center}
-}main #practice{background-color:#000;z-index:-5;width:100%;height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;padding-top:100px;padding-bottom:120px;display:flex;flex-direction:column;justify-content:center;align-items:center}
-main #practice .wrapper{max-width:1200px;margin-bottom:50px;position:relative}main #practice .wrapper .section-title{font-size:30.89px;font-family:"Playfair Display",serif;margin-bottom:35px;color:#fff}
-main #practice .wrapper .bg-number{position:absolute;z-index:-1;top:-50px;left:-20px;font-size:194.6px;color:gray}
+}main #practice{width:100%;height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;padding-top:100px;padding-bottom:120px;display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:#000}
+main #practice .wrapper{max-width:1200px;margin-bottom:50px;position:relative}main #practice .wrapper .section-title{font-size:30.89px;font-family:"Playfair Display",serif;margin-bottom:35px;z-index:5;color:#fff}
+main #practice .wrapper .bg-number{z-index:-5;position:absolute;top:-50px;left:-20px;font-size:194.6px;color:ghostwhite}
 main #practice .wrapper .section-exp{font-size:20.92px;color:#666;font-family:"Playfair Display",serif;letter-spacing:1px;line-height:1.5}
 main #practice .info__grid{display:grid;color:#fff;grid-template-columns:repeat(2,1fr);gap:50px}
 main #practice .info__grid .grid-item{display:flex;max-width:500px}main #practice .info__grid .grid-item i{color:#e8bf5d}
 main #practice .info__grid .grid-item__wrapper{margin-left:30px}main #practice .info__grid .grid-item__wrapper h2{font-family:"Playfair Display",serif;text-transform:uppercase;margin-bottom:25px;font-size:21px}
-main #practice .info__grid .grid-item__wrapper p{font-size:14px;line-height:1.5}
+main #practice .info__grid .grid-item__wrapper p{font-size:14px;line-height:2}@media screen and (min-width:480px) and (max-width:767px){main #practice .info__grid{grid-template-columns:1fr}
+}@media screen and (max-width:479px){main #practice .info__grid{grid-template-columns:1fr}
+}main #attorney{width:100%;height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;padding-top:100px;padding-bottom:120px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+main #attorney .wrapper{max-width:1200px;margin-bottom:50px;position:relative}main #attorney .wrapper .section-title{font-size:30.89px;font-family:"Playfair Display",serif;margin-bottom:35px;z-index:5}
+main #attorney .wrapper .bg-number{z-index:-5;position:absolute;top:-50px;left:-20px;font-size:194.6px;color:ghostwhite}
+main #attorney .wrapper .section-exp{font-size:20.92px;color:#666;font-family:"Playfair Display",serif;letter-spacing:1px;line-height:1.5}
+main #attorney .attorney__wrapper{display:grid;grid-template-columns:repeat(4,minmax(200px,auto));gap:30px}
+main #attorney .attorney__wrapper .bio{display:flex;flex-direction:column;margin-top:30px}
+main #attorney .attorney__wrapper .bio .attorney-name{font-size:21px;font-family:"Playfair Display",serif;margin-bottom:15px}
+main #attorney .attorney__wrapper .bio .attorney-position{font-size:14px;color:#666}
+@media only screen and (min-width:768px) and (max-width:1023px){main #attorney .attorney__wrapper{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr)}
+}@media screen and (min-width:480px) and (max-width:767px){main #attorney .attorney__wrapper{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr)}
+}@media screen and (max-width:479px){main #attorney .attorney__wrapper{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr)}
+}main #client{width:100%;height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;padding-top:100px;padding-bottom:120px;display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:#000}
+main #client .wrapper{max-width:1200px;margin-bottom:50px;position:relative}main #client .wrapper .section-title{font-size:30.89px;font-family:"Playfair Display",serif;margin-bottom:35px;z-index:5;color:#fff}
+main #client .wrapper .bg-number{z-index:-5;position:absolute;top:-50px;left:-20px;font-size:194.6px;color:ghostwhite}
+main #client .wrapper .section-exp{font-size:20.92px;color:#666;font-family:"Playfair Display",serif;letter-spacing:1px;line-height:1.5}
+main #publications{width:100%;height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;padding-top:100px;padding-bottom:120px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+main #publications .wrapper{max-width:1200px;margin-bottom:50px;position:relative}
+main #publications .wrapper .section-title{font-size:30.89px;font-family:"Playfair Display",serif;margin-bottom:35px;z-index:5}
+main #publications .wrapper .bg-number{z-index:-5;position:absolute;top:-50px;left:-20px;font-size:194.6px;color:ghostwhite}
+main #publications .wrapper .section-exp{font-size:20.92px;color:#666;font-family:"Playfair Display",serif;letter-spacing:1px;line-height:1.5}

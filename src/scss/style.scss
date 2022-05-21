@@ -452,39 +452,8 @@ main {
   }
 
   #practice {
-    background-color: variable.$black;
-    z-index: -5;
-    @include mixin.layout;
-
-    .wrapper {
-      max-width: 1200px;
-      margin-bottom: 50px;
-      position: relative;
-
-      .section-title {
-        font-size: 30.89px;
-        font-family: variable.$playfair-display;
-        margin-bottom: 35px;
-        color: variable.$white;
-      }
-
-      .bg-number {
-        position: absolute;
-        z-index: -1;
-        top: -50px;
-        left: -20px;
-        font-size: 194.6px;
-        color: gray;
-      }
-
-      .section-exp {
-        font-size: 20.92px;
-        color: variable.$grey;
-        font-family: variable.$playfair-display;
-        letter-spacing: 1px;
-        line-height: 1.5;
-      }
-    }
+    @include mixin.layout-dark;
+    @include mixin.section-title-dark;
 
     .info__grid {
       display: grid;
@@ -513,9 +482,80 @@ main {
 
         p {
           font-size: 14px;
-          line-height: 1.5;
+          line-height: 2;
         }
       }
     }
+
+    @include mixin.devices(mobile-horizontal) {
+      .info__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @include mixin.devices(mobile-vertical) {
+      .info__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  #attorney {
+    @include mixin.layout;
+    @include mixin.section-title;
+
+    .attorney__wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(200px, auto));
+      gap: 30px;
+
+      .bio {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+
+        .attorney-name {
+          font-size: 21px;
+          font-family: variable.$playfair-display;
+          margin-bottom: 15px;
+        }
+
+        .attorney-position {
+          font-size: 14px;
+          color: variable.$grey;
+        }
+      }
+    }
+
+    @include mixin.devices(tablet-horizontal) {
+      .attorney__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
+    }
+
+    @include mixin.devices(mobile-horizontal) {
+      .attorney__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
+    }
+
+    @include mixin.devices(mobile-vertical) {
+      .attorney__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
+    }
+  }
+
+  #client {
+    @include mixin.layout-dark;
+    @include mixin.section-title-dark;
+  }
+
+  #publications {
+    @include mixin.layout;
+    @include mixin.section-title;
   }
 }
