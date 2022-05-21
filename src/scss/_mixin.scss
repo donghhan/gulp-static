@@ -17,6 +17,50 @@
   }
 }
 
+// Main section
+@mixin layout {
+  width: 100%;
+  height: fit-content;
+  padding-top: 100px;
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin section-title {
+  .wrapper {
+    max-width: 1200px;
+    margin-bottom: 50px;
+    position: relative;
+
+    .section-title {
+      font-size: 30.89px;
+      font-family: variable.$playfair-display;
+      margin-bottom: 35px;
+      z-index: 5;
+    }
+
+    .bg-number {
+      z-index: -5;
+      position: absolute;
+      top: -50px;
+      left: -20px;
+      font-size: 194.6px;
+      color: ghostwhite;
+    }
+
+    .section-exp {
+      font-size: 20.92px;
+      color: variable.$grey;
+      font-family: variable.$playfair-display;
+      letter-spacing: 1px;
+      line-height: 1.5;
+    }
+  }
+}
+
 // Hamburger menu
 @mixin button($width, $height, $top: null, $right: null) {
   position: absolute;

@@ -364,33 +364,8 @@ main {
   }
 
   #about {
-    width: 100%;
-    height: fit-content;
-    padding-top: 100px;
-    padding-bottom: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .about__wrapper {
-      max-width: 1200px;
-      margin-bottom: 50px;
-
-      .section-title {
-        font-size: 30.89px;
-        font-family: variable.$playfair-display;
-        margin-bottom: 35px;
-      }
-
-      .intro {
-        font-size: 20.92px;
-        color: variable.$grey;
-        font-family: variable.$playfair-display;
-        letter-spacing: 1px;
-        line-height: 1.5;
-      }
-    }
+    @include mixin.layout;
+    @include mixin.section-title;
 
     .info__wrapper {
       max-width: 1200px;
@@ -471,6 +446,74 @@ main {
           .expertise-exp {
             text-align: center;
           }
+        }
+      }
+    }
+  }
+
+  #practice {
+    background-color: variable.$black;
+    z-index: -5;
+    @include mixin.layout;
+
+    .wrapper {
+      max-width: 1200px;
+      margin-bottom: 50px;
+      position: relative;
+
+      .section-title {
+        font-size: 30.89px;
+        font-family: variable.$playfair-display;
+        margin-bottom: 35px;
+        color: variable.$white;
+      }
+
+      .bg-number {
+        position: absolute;
+        z-index: -1;
+        top: -50px;
+        left: -20px;
+        font-size: 194.6px;
+        color: gray;
+      }
+
+      .section-exp {
+        font-size: 20.92px;
+        color: variable.$grey;
+        font-family: variable.$playfair-display;
+        letter-spacing: 1px;
+        line-height: 1.5;
+      }
+    }
+
+    .info__grid {
+      display: grid;
+      color: variable.$white;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+
+      .grid-item {
+        display: flex;
+        max-width: 500px;
+
+        i {
+          color: variable.$yellow;
+        }
+      }
+
+      .grid-item__wrapper {
+        margin-left: 30px;
+
+        h2 {
+          font-family: variable.$playfair-display;
+          text-transform: uppercase;
+          margin-bottom: 25px;
+          font-size: 21px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 1.5;
         }
       }
     }

@@ -63,8 +63,9 @@ main #hero .hero__wrapper .name h1{font-size:50px}main #hero .hero__wrapper .nam
 main #hero .hero__wrapper{width:100%;max-width:350px;position:absolute;left:50%;bottom:10%}
 main #hero .hero__wrapper .name h1{font-size:25px}main #hero .hero__wrapper .name h2{font-size:15px}
 main #hero .hero__wrapper .contact-btn{width:100px;font-size:12.5px}}main #about{width:100%;height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;padding-top:100px;padding-bottom:120px;display:flex;flex-direction:column;justify-content:center;align-items:center}
-main #about .about__wrapper{max-width:1200px;margin-bottom:50px}main #about .about__wrapper .section-title{font-size:30.89px;font-family:"Playfair Display",serif;margin-bottom:35px}
-main #about .about__wrapper .intro{font-size:20.92px;color:#666;font-family:"Playfair Display",serif;letter-spacing:1px;line-height:1.5}
+main #about .wrapper{max-width:1200px;margin-bottom:50px;position:relative}main #about .wrapper .section-title{font-size:30.89px;font-family:"Playfair Display",serif;margin-bottom:35px;z-index:5}
+main #about .wrapper .bg-number{z-index:-5;position:absolute;top:-50px;left:-20px;font-size:194.6px;color:ghostwhite}
+main #about .wrapper .section-exp{font-size:20.92px;color:#666;font-family:"Playfair Display",serif;letter-spacing:1px;line-height:1.5}
 main #about .info__wrapper{max-width:1200px;width:100%;display:flex;justify-content:space-between;gap:50px}
 main #about .info__wrapper .paragraph{max-width:50%}main #about .info__wrapper .paragraph .p-title{font-size:21px;font-family:"Playfair Display",serif;margin-bottom:40px}
 main #about .info__wrapper .paragraph .timeline{display:flex;align-items:center;margin-bottom:30px}
@@ -74,4 +75,11 @@ main #about .info__wrapper .expertise .expertise-exp{line-height:1.5;color:#666}
 main #about .info__wrapper .paragraph{max-width:inherit}}@media screen and (min-width:480px) and (max-width:767px){main #about .info__wrapper{flex-direction:column;width:100%}
 main #about .info__wrapper .paragraph{max-width:inherit}}@media screen and (max-width:479px){main #about .info__wrapper{flex-direction:column;width:100%}
 main #about .info__wrapper .paragraph{max-width:inherit}main #about .info__wrapper .paragraph .expertise-exp{text-align:center}
-}
+}main #practice{background-color:#000;z-index:-5;width:100%;height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;padding-top:100px;padding-bottom:120px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+main #practice .wrapper{max-width:1200px;margin-bottom:50px;position:relative}main #practice .wrapper .section-title{font-size:30.89px;font-family:"Playfair Display",serif;margin-bottom:35px;color:#fff}
+main #practice .wrapper .bg-number{position:absolute;z-index:-1;top:-50px;left:-20px;font-size:194.6px;color:gray}
+main #practice .wrapper .section-exp{font-size:20.92px;color:#666;font-family:"Playfair Display",serif;letter-spacing:1px;line-height:1.5}
+main #practice .info__grid{display:grid;color:#fff;grid-template-columns:repeat(2,1fr);gap:50px}
+main #practice .info__grid .grid-item{display:flex;max-width:500px}main #practice .info__grid .grid-item i{color:#e8bf5d}
+main #practice .info__grid .grid-item__wrapper{margin-left:30px}main #practice .info__grid .grid-item__wrapper h2{font-family:"Playfair Display",serif;text-transform:uppercase;margin-bottom:25px;font-size:21px}
+main #practice .info__grid .grid-item__wrapper p{font-size:14px;line-height:1.5}
