@@ -400,7 +400,7 @@ main {
       gap: 50px;
 
       .paragraph {
-        max-width: 600px;
+        max-width: 50%;
 
         .p-title {
           font-size: 21px;
@@ -434,6 +434,43 @@ main {
         .expertise-exp {
           line-height: 1.5;
           color: variable.$grey;
+        }
+      }
+    }
+
+    @include mixin.devices(tablet-horizontal) {
+      .info__wrapper {
+        flex-direction: column;
+        width: 100%;
+
+        .paragraph {
+          max-width: inherit;
+        }
+      }
+    }
+
+    @include mixin.devices(mobile-horizontal) {
+      .info__wrapper {
+        flex-direction: column;
+        width: 100%;
+
+        .paragraph {
+          max-width: inherit;
+        }
+      }
+    }
+
+    @include mixin.devices(mobile-vertical) {
+      .info__wrapper {
+        flex-direction: column;
+        width: 100%;
+
+        .paragraph {
+          max-width: inherit;
+
+          .expertise-exp {
+            text-align: center;
+          }
         }
       }
     }
