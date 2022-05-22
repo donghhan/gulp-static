@@ -465,8 +465,10 @@ main {
         display: flex;
         max-width: 500px;
 
-        i {
-          color: variable.$yellow;
+        img {
+          width: 30px;
+          height: 30px;
+          filter: variable.$yellow-svg;
         }
       }
 
@@ -506,45 +508,39 @@ main {
 
     .attorney__wrapper {
       display: grid;
-      grid-template-columns: repeat(4, minmax(200px, auto));
-      gap: 30px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 50px;
 
-      .bio {
-        display: flex;
-        flex-direction: column;
-        margin-top: 30px;
+      .grid-item {
+        .bio {
+          display: flex;
+          flex-direction: column;
+          margin-top: 30px;
 
-        .attorney-name {
-          font-size: 21px;
-          font-family: variable.$playfair-display;
-          margin-bottom: 15px;
+          .attorney-name {
+            font-size: 21px;
+            font-family: variable.$playfair-display;
+            margin-bottom: 15px;
+          }
+
+          .attorney-position {
+            font-size: 14px;
+            color: variable.$grey;
+          }
         }
-
-        .attorney-position {
-          font-size: 14px;
-          color: variable.$grey;
-        }
       }
     }
 
-    @include mixin.devices(tablet-horizontal) {
+    @media screen and (max-width: 1250px) {
       .attorney__wrapper {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
       }
     }
 
-    @include mixin.devices(mobile-horizontal) {
+    @media screen and (max-width: 610px) {
       .attorney__wrapper {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-      }
-    }
-
-    @include mixin.devices(mobile-vertical) {
-      .attorney__wrapper {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
     }
   }

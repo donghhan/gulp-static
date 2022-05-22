@@ -80,7 +80,7 @@ main #practice .wrapper{max-width:1200px;margin-bottom:50px;position:relative}ma
 main #practice .wrapper .bg-number{z-index:-5;position:absolute;top:-50px;left:-20px;font-size:194.6px;color:ghostwhite}
 main #practice .wrapper .section-exp{font-size:20.92px;color:#666;font-family:"Playfair Display",serif;letter-spacing:1px;line-height:1.5}
 main #practice .info__grid{display:grid;color:#fff;grid-template-columns:repeat(2,1fr);gap:50px}
-main #practice .info__grid .grid-item{display:flex;max-width:500px}main #practice .info__grid .grid-item i{color:#e8bf5d}
+main #practice .info__grid .grid-item{display:flex;max-width:500px}main #practice .info__grid .grid-item img{width:30px;height:30px;filter:invert(86%) sepia(15%) saturate(1642%) hue-rotate(342deg) brightness(97%) contrast(87%)}
 main #practice .info__grid .grid-item__wrapper{margin-left:30px}main #practice .info__grid .grid-item__wrapper h2{font-family:"Playfair Display",serif;text-transform:uppercase;margin-bottom:25px;font-size:21px}
 main #practice .info__grid .grid-item__wrapper p{font-size:14px;line-height:2}@media screen and (min-width:480px) and (max-width:767px){main #practice .info__grid{grid-template-columns:1fr}
 }@media screen and (max-width:479px){main #practice .info__grid{grid-template-columns:1fr}
@@ -88,13 +88,12 @@ main #practice .info__grid .grid-item__wrapper p{font-size:14px;line-height:2}@m
 main #attorney .wrapper{max-width:1200px;margin-bottom:50px;position:relative}main #attorney .wrapper .section-title{font-size:30.89px;font-family:"Playfair Display",serif;margin-bottom:35px;z-index:5}
 main #attorney .wrapper .bg-number{z-index:-5;position:absolute;top:-50px;left:-20px;font-size:194.6px;color:ghostwhite}
 main #attorney .wrapper .section-exp{font-size:20.92px;color:#666;font-family:"Playfair Display",serif;letter-spacing:1px;line-height:1.5}
-main #attorney .attorney__wrapper{display:grid;grid-template-columns:repeat(4,minmax(200px,auto));gap:30px}
-main #attorney .attorney__wrapper .bio{display:flex;flex-direction:column;margin-top:30px}
-main #attorney .attorney__wrapper .bio .attorney-name{font-size:21px;font-family:"Playfair Display",serif;margin-bottom:15px}
-main #attorney .attorney__wrapper .bio .attorney-position{font-size:14px;color:#666}
-@media only screen and (min-width:768px) and (max-width:1023px){main #attorney .attorney__wrapper{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr)}
-}@media screen and (min-width:480px) and (max-width:767px){main #attorney .attorney__wrapper{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr)}
-}@media screen and (max-width:479px){main #attorney .attorney__wrapper{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr)}
+main #attorney .attorney__wrapper{display:grid;grid-template-columns:repeat(4,1fr);gap:50px}
+main #attorney .attorney__wrapper .grid-item .bio{display:flex;flex-direction:column;margin-top:30px}
+main #attorney .attorney__wrapper .grid-item .bio .attorney-name{font-size:21px;font-family:"Playfair Display",serif;margin-bottom:15px}
+main #attorney .attorney__wrapper .grid-item .bio .attorney-position{font-size:14px;color:#666}
+@media screen and (max-width:1250px){main #attorney .attorney__wrapper{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr)}
+}@media screen and (max-width:610px){main #attorney .attorney__wrapper{grid-template-columns:1fr}
 }main #client{width:100%;height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;padding-top:100px;padding-bottom:120px;display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:#000}
 main #client .wrapper{max-width:1200px;margin-bottom:50px;position:relative}main #client .wrapper .section-title{font-size:30.89px;font-family:"Playfair Display",serif;margin-bottom:35px;z-index:5;color:#fff}
 main #client .wrapper .bg-number{z-index:-5;position:absolute;top:-50px;left:-20px;font-size:194.6px;color:ghostwhite}
