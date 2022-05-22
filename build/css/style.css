@@ -98,7 +98,11 @@ main #attorney .attorney__wrapper .grid-item .bio .attorney-position{font-size:1
 main #client .wrapper{max-width:1200px;margin-bottom:50px;position:relative}main #client .wrapper .section-title{font-size:30.89px;font-family:"Playfair Display",serif;margin-bottom:35px;z-index:5;color:#fff}
 main #client .wrapper .bg-number{z-index:-5;position:absolute;top:-50px;left:-20px;font-size:194.6px;color:ghostwhite}
 main #client .wrapper .section-exp{font-size:20.92px;color:#666;font-family:"Playfair Display",serif;letter-spacing:1px;line-height:1.5}
-main #publications{width:100%;height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;padding-top:100px;padding-bottom:120px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+main #client .client__wrapper{max-width:1200px;width:100%;display:flex;justify-content:space-between;z-index:20}
+main #client .client__wrapper .client-portrait{position:relative;z-index:10}main #client .client__wrapper .client-portrait::after{content:"";position:absolute;top:25px;left:25px;width:370px;height:305px;background-color:#e8bf5d;z-index:9}
+main #client .client__wrapper .client-exp{max-width:600px;color:#fff;position:relative}
+main #client .client__wrapper .client-exp img{width:30px;height:30px;filter:invert(43%) sepia(0) saturate(38%) hue-rotate(157deg) brightness(91%) contrast(87%);position:absolute;top:0;left:-40px}
+main #client .client__wrapper .client-exp p{font-size:14px;line-height:2.5}main #publications{width:100%;height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;padding-top:100px;padding-bottom:120px;display:flex;flex-direction:column;justify-content:center;align-items:center}
 main #publications .wrapper{max-width:1200px;margin-bottom:50px;position:relative}
 main #publications .wrapper .section-title{font-size:30.89px;font-family:"Playfair Display",serif;margin-bottom:35px;z-index:5}
 main #publications .wrapper .bg-number{z-index:-5;position:absolute;top:-50px;left:-20px;font-size:194.6px;color:ghostwhite}

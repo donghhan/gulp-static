@@ -548,6 +548,50 @@ main {
   #client {
     @include mixin.layout-dark;
     @include mixin.section-title-dark;
+
+    .client__wrapper {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      z-index: 20;
+
+      .client-portrait {
+        position: relative;
+        z-index: 10;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 25px;
+          left: 25px;
+          width: 370px;
+          height: 305px;
+          background-color: variable.$yellow;
+          z-index: 9;
+        }
+      }
+
+      .client-exp {
+        max-width: 600px;
+        color: variable.$white;
+        position: relative;
+
+        img {
+          width: 30px;
+          height: 30px;
+          filter: variable.$grey-svg;
+          position: absolute;
+          top: 0;
+          left: -40px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 2.5;
+        }
+      }
+    }
   }
 
   #publications {
