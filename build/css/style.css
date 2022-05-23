@@ -1,6 +1,6 @@
 *{margin:0;padding:0;box-sizing:border-box}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-body{line-height:1;font-family:"Open sans",serif;z-index:-5}ol,ul{list-style:none}
+body{line-height:1;font-family:"Open sans",serif}ol,ul{list-style:none}
 blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}
 table{border-collapse:collapse;border-spacing:0}a{text-decoration:none;color:inherit}
 span{display:inline-block}button{outline:0;background:0;border:0;cursor:pointer}.container{padding:0 10%}
@@ -98,11 +98,14 @@ main #attorney .attorney__wrapper .grid-item .bio .attorney-position{font-size:1
 main #client .wrapper{max-width:1200px;margin-bottom:50px;position:relative}main #client .wrapper .section-title{font-size:30.89px;font-family:"Playfair Display",serif;margin-bottom:35px;z-index:5;color:#fff}
 main #client .wrapper .bg-number{z-index:-5;position:absolute;top:-50px;left:-20px;font-size:194.6px;color:ghostwhite}
 main #client .wrapper .section-exp{font-size:20.92px;color:#666;font-family:"Playfair Display",serif;letter-spacing:1px;line-height:1.5}
-main #client .client__wrapper{max-width:1200px;width:100%;display:flex;justify-content:space-between;z-index:20}
-main #client .client__wrapper .client-portrait{position:relative;z-index:10}main #client .client__wrapper .client-portrait::after{content:"";position:absolute;top:25px;left:25px;width:370px;height:305px;background-color:#e8bf5d;z-index:9}
+main #client .client__wrapper{max-width:1200px;width:100%;display:flex;justify-content:space-between}
+main #client .client__wrapper .client-portrait{position:relative;z-index:5}main #client .client__wrapper .client-portrait::after{content:"";position:absolute;top:30px;left:30px;background-color:#e8bf5d;width:370px;height:300px;z-index:-1}
 main #client .client__wrapper .client-exp{max-width:600px;color:#fff;position:relative}
+main #client .client__wrapper .client-exp #second,main #client .client__wrapper .client-exp #third{display:none}
 main #client .client__wrapper .client-exp img{width:30px;height:30px;filter:invert(43%) sepia(0) saturate(38%) hue-rotate(157deg) brightness(91%) contrast(87%);position:absolute;top:0;left:-40px}
-main #client .client__wrapper .client-exp p{font-size:14px;line-height:2.5}main #publications{width:100%;height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;padding-top:100px;padding-bottom:120px;display:flex;flex-direction:column;justify-content:center;align-items:center}
+main #client .client__wrapper .client-exp p{font-size:14px;line-height:2.5}main #client .client__wrapper .button__wrapper{margin-top:100px;display:flex;gap:7.5px}
+main #client .client__wrapper .button__wrapper .carousel-btn{width:10px;height:10px;border:1px solid #fff;border-radius:50%}
+main #publications{width:100%;height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;padding-top:100px;padding-bottom:120px;display:flex;flex-direction:column;justify-content:center;align-items:center}
 main #publications .wrapper{max-width:1200px;margin-bottom:50px;position:relative}
 main #publications .wrapper .section-title{font-size:30.89px;font-family:"Playfair Display",serif;margin-bottom:35px;z-index:5}
 main #publications .wrapper .bg-number{z-index:-5;position:absolute;top:-50px;left:-20px;font-size:194.6px;color:ghostwhite}

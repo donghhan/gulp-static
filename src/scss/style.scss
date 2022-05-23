@@ -554,21 +554,20 @@ main {
       width: 100%;
       display: flex;
       justify-content: space-between;
-      z-index: 20;
 
       .client-portrait {
         position: relative;
-        z-index: 10;
+        z-index: 5;
 
         &::after {
           content: "";
           position: absolute;
-          top: 25px;
-          left: 25px;
-          width: 370px;
-          height: 305px;
+          top: 30px;
+          left: 30px;
           background-color: variable.$yellow;
-          z-index: 9;
+          width: 370px;
+          height: 300px;
+          z-index: -1;
         }
       }
 
@@ -576,6 +575,11 @@ main {
         max-width: 600px;
         color: variable.$white;
         position: relative;
+
+        #second,
+        #third {
+          display: none;
+        }
 
         img {
           width: 30px;
@@ -589,6 +593,18 @@ main {
         p {
           font-size: 14px;
           line-height: 2.5;
+        }
+      }
+      .button__wrapper {
+        margin-top: 100px;
+        display: flex;
+        gap: 7.5px;
+
+        .carousel-btn {
+          width: 10px;
+          height: 10px;
+          border: 1px solid variable.$white;
+          border-radius: 50%;
         }
       }
     }
