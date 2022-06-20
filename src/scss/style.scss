@@ -613,5 +613,15 @@ main {
   #publications {
     @include mixin.layout;
     @include mixin.section-title;
+
+    .blog-posts-section {
+      display: flex;
+
+      .blog-post {
+        width: 100%;
+        max-width: 370px;
+        border-bottom: 3px solid variable.$yellow;
+      }
+    }
   }
 }
