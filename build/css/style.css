@@ -110,4 +110,9 @@ main #publications .wrapper{max-width:1200px;margin-bottom:50px;position:relativ
 main #publications .wrapper .section-title{font-size:30.89px;font-family:"Playfair Display",serif;margin-bottom:35px;z-index:5}
 main #publications .wrapper .bg-number{z-index:-5;position:absolute;top:-50px;left:-20px;font-size:194.6px;color:ghostwhite}
 main #publications .wrapper .section-exp{font-size:20.92px;color:#666;font-family:"Playfair Display",serif;letter-spacing:1px;line-height:1.5}
-main #publications .blog-posts-section{display:flex}main #publications .blog-posts-section .blog-post{width:100%;max-width:370px;border-bottom:3px solid #e8bf5d}
+main #publications .blog-posts-section{display:flex;gap:45px}main #publications .blog-posts-section .blog-post{width:100%;max-width:370px;border-bottom:3px solid #e8bf5d}
+main #publications .blog-posts-section .blog-post .blog-title h2{margin-top:30px;font-size:31px;font-family:"Playfair Display",serif}
+main #publications .blog-posts-section .blog-post .blog-title .blog-info{margin-top:10px;display:flex;justify-content:space-between}
+main #publications .blog-posts-section .blog-post .blog-title .blog-info span:first-of-type{font-style:italic;color:#666}
+main #publications .blog-posts-section .blog-post .blog-summary{margin-top:45px;color:#666;line-height:2}
+main #publications .blog-posts-section .blog-post .blog-utils{margin:35px 0 30px 0}
