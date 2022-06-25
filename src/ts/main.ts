@@ -6,3 +6,11 @@ hamburgerBtn.addEventListener("click", () => {
 });
 
 // Image Carousel
+const slider = document.querySelector(".client-portrait");
+const firstImage = document.querySelector("#client-1");
+const secondImage = document.querySelector("#client-2");
+const thirdImage = document.querySelector("#client-3");
+
+function AutomatedImageSlider() {}
+
+setTimeout(AutomatedImageSlider, 3000);
