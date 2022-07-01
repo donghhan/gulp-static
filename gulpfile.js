@@ -108,6 +108,7 @@ function Watch() {
 
 // Task serializing
 const pre = gulp.series([Clean]);
-const build = gulp.series([MinifyHTML, SCSStoCSS, Image, TStoJS]);
+const progress = gulp.series([MinifyHTML, SCSStoCSS, Image, TStoJS]);
 
-exports.dev = gulp.series(pre, build, Watch);
+exports.dev = gulp.series(pre, progress, Watch);
+exports.build = gulp.series(pre, progress);
