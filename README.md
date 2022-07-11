@@ -36,11 +36,15 @@ yarn dev
 
 1. Auto deploy in `gh-pages` branch
 
-![auto_deploy](http://www.giphy.com/gifs/jrEzPvejbmyFEK4sEo)
+![auto_deploy](https://media.giphy.com/media/jrEzPvejbmyFEK4sEo/giphy.gif)
 
 2. Converting SCSS & TypeScript files into CSS & vanilla JavaScript files and enhanced performance build. 
 
-![uglified_final](https://imgur.com/a/Qna5g58)
+![uglified_version](https://i.imgur.com/kKy2QHn.png)
+
+3. Hot refresh with browser-sync
+
+![hot_refresh](https://media.giphy.com/media/6ZI61Ttt17rjoGK3Bb/giphy.gif)
 
 3. Responsive design 
 
