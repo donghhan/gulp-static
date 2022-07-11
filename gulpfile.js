@@ -1,5 +1,6 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
+const csso = require("gulp-csso");
 const autoPrefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
 const del = require("del");
@@ -15,24 +16,25 @@ const { stream } = require("browser-sync");
 const uglifycss = require("gulp-uglifycss");
 const ts = require("gulp-typescript");
 const tsProject = ts.createProject("tsconfig.json");
+const ghPages = require("gulp-gh-pages");
 
 // Routes
 const routes = {
   html: {
     src: "src/**/*.html",
-    build: "build",
+    docs: "docs",
   },
   image: {
     src: "src/image/*",
-    build: "build/image",
+    docs: "docs/image",
   },
   scss: {
     src: "src/scss/**/*.scss",
-    build: "build/css/",
+    docs: "docs/css/",
   },
   ts: {
     src: "src/ts/**/*.ts",
-    build: "build/js/",
+    docs: "docs/js/",
   },
 };
 
@@ -41,7 +43,7 @@ function MinifyHTML() {
   return gulp
     .src(routes.html.src)
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest(routes.html.build))
+    .pipe(gulp.dest(routes.html.docs))
     .pipe(browserSync.stream());
 }
 
@@ -52,12 +54,12 @@ function SCSStoCSS() {
     .pipe(sass())
     .pipe(autoPrefixer())
     .pipe(
-      uglifycss({
-        maxLineLen: 80,
-        uglyComments: true,
+      csso({
+        sourceMap: false,
+        debug: true,
       })
     )
-    .pipe(gulp.dest(routes.scss.build))
+    .pipe(gulp.dest(routes.scss.docs))
     .pipe(browserSync.stream());
 }
 
@@ -76,7 +78,7 @@ function TStoJS() {
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(uglify())
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("docs"))
     .pipe(browserSync.stream());
 }
 
@@ -85,12 +87,12 @@ function Image() {
   return gulp
     .src(routes.image.src)
     .pipe(image())
-    .pipe(gulp.dest(routes.image.build));
+    .pipe(gulp.dest(routes.image.docs));
 }
 
 // Clearing all old files
 function Clean() {
-  return del(["build/"]);
+  return del(["docs/"]);
 }
 
 // Live server configuration
@@ -98,7 +100,7 @@ function Clean() {
 function Watch() {
   browserSync.init({
     server: {
-      baseDir: "./build",
+      baseDir: "./docs",
     },
   });
   gulp.watch(routes.scss.src, SCSStoCSS);
@@ -106,9 +108,14 @@ function Watch() {
   gulp.watch(routes.ts.src, TStoJS);
 }
 
+// Deploying Github pages
+function GhPages() {
+  return gulp.src("docs/**/*").pipe(ghPages());
+}
+
 // Task serializing
-const pre = gulp.series([Clean]);
 const progress = gulp.series([MinifyHTML, SCSStoCSS, Image, TStoJS]);
 
-exports.dev = gulp.series(pre, progress, Watch);
-exports.build = gulp.series(pre, progress);
+exports.dev = gulp.series([Clean, progress, Watch]);
+exports.build = gulp.series([Clean, progress]);
+exports.deploy = gulp.series([progress, GhPages, Clean]);
